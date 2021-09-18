@@ -1,0 +1,59 @@
+
+#ASTM Classification FIXED CARBON
+
+tex2 = print("Calculation for Fixed Carbon")
+num3 = float(input("Enter Volatile Matter wt%: "))
+num4 = float(input("Enter Moisture wt%: "))
+num6 = float(input("Enter Ash yield wt%: "))
+FC = float(100-(num4+num3+num6))
+print("Fixed carbon is:", FC)
+if (FC>=98):
+    print("According to ASTM Classification it is Meta Anthracite")
+elif (92<=FC<=97):
+    print("According to ASTM Classification it is Anthracite")
+elif (86<=FC<=91):
+    print("According to ASTM Classification it is Semi Anthracite")
+elif (78<=FC<=85):
+    print("According to ASTM Classification it is Low volatile Bituminous")
+elif (69<=FC<=77):
+    print("According to ASTM Classification it is Medium volatile Bituminous")
+elif (FC<=68):
+    print("According to ASTM Classification it is High Volatile A Bituminous")
+
+#Fraser classification
+
+tex = print("Calculation of fuel ratio")
+num2 = float(input("Enter Fixed carbon wt%: "))
+FR = (float(num2/num3))
+print("Fuel Ratio is:", FR)
+if (FR>=13):
+    print("So, According to Fraser Classification it is Anthracite")
+elif (9<=FR<=12):
+    print("So, According to Fraser Classification it is Semi Anthracite")
+elif (6<=FR<=8):
+    print("So, According to Fraser Classification it is Semi Bituminous")
+elif (0<=FR<=5):
+    print("So, According to Fraser Classification it is Bituminous")
+
+
+#ASTM Classification VOLATILE MATTER
+
+tex3 = print("Calculation for Volatile Matter on Dry, Mineral matter free basis")
+num7 = float(input("Enter Mineral Matter wt%: "))
+VM_DMMF = float((num3/(100-num7-num4))*100)
+print("Volatile matter on Dry, Mineral matter free basis is: ", VM_DMMF)
+if (VM_DMMF<=2):
+    print("According to ASTM Classification it is Meta Anthracite with non-agglomerating character")
+elif (3<=VM_DMMF<=8):
+    print("According to ASTM Classification it is Anthracite with non-agglomerating character")
+elif (9<=VM_DMMF<=14):
+    print("According to ASTM Classification it is Semi Anthracite with non-agglomerating character")
+elif (15<=VM_DMMF<=22):
+    print("According to ASTM Classification it is Low volatile Bituminous (caking)")
+elif (23<=VM_DMMF<=30):
+    print("According to ASTM Classification it is Medium volatile Bituminous")
+elif (VM_DMMF>=31):
+    print("According to ASTM Classification it is High Volatile A Bituminous (caking)")
+
+
+
